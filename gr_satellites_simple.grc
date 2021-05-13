@@ -1,16 +1,16 @@
 options:
   parameters:
-    author: ''
+    author: Daniel-arod
     category: '[GRC Hier Blocks]'
     cmake_opt: ''
     comment: ''
-    copyright: ''
-    description: ''
+    copyright: MIT
+    description: Original example made by Daniel Estevez:https://youtu.be/TceMth67r9c
     gen_cmake: 'On'
     gen_linking: dynamic
     generate_options: qt_gui
     hier_block_src_path: '.:'
-    id: tutorial_gr_sattelites
+    id: tutorial_gr_satellites
     max_nouts: '0'
     output_language: python
     placement: (0,0)
@@ -21,7 +21,7 @@ options:
     run_options: prompt
     sizing_mode: fixed
     thread_safe_setters: ''
-    title: Not titled yet
+    title: gr_satellites_simple
     window_size: ''
   states:
     bus_sink: false
@@ -60,7 +60,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [344, 142]
+    coordinate: [231, 142]
     rotation: 0
     state: true
 - name: blocks_wavfile_source_0
@@ -69,7 +69,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    file: /home/daniel-arod/programas/satellite-recordings/aausat_4.wav
+    file: /home/daniel-arod/Documentos/Semillero/SDR/2021-05-11_charla_sdr_flisol_ec/aausat_4.wav
     maxoutbuf: '0'
     minoutbuf: '0'
     nchan: '1'
@@ -78,7 +78,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [22, 134]
+    coordinate: [2, 134]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0
@@ -175,7 +175,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [593, 129]
+    coordinate: [460, 126]
     rotation: 0
     state: true
 - name: satellites_hexdump_sink_0
@@ -189,7 +189,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [928, 247]
+    coordinate: [753, 249]
     rotation: 0
     state: enabled
 - name: satellites_satellite_decoder_0
@@ -211,7 +211,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [600, 228]
+    coordinate: [459, 229]
     rotation: 0
     state: enabled
 
