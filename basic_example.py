@@ -5,10 +5,10 @@
 # SPDX-License-Identifier: GPL-3.0
 #
 # GNU Radio Python Flow Graph
-# Title: ejemplo_senial_coseno
+# Title: basic_example
 # Author: daniel-arod
 # Copyright: MIT
-# Description: ejemplo tomado de: X
+# Description: original example was made by Cardona I: https://youtu.be/KCtcHaPr7Ug
 # GNU Radio version: 3.8.2.0
 
 from distutils.version import StrictVersion
@@ -38,12 +38,12 @@ from gnuradio import eng_notation
 
 from gnuradio import qtgui
 
-class Ejemplo_basico_gnu_radio(gr.top_block, Qt.QWidget):
+class basic_example(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "ejemplo_senial_coseno")
+        gr.top_block.__init__(self, "basic_example")
         Qt.QWidget.__init__(self)
-        self.setWindowTitle("ejemplo_senial_coseno")
+        self.setWindowTitle("basic_example")
         qtgui.util.check_set_qss()
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
@@ -61,7 +61,7 @@ class Ejemplo_basico_gnu_radio(gr.top_block, Qt.QWidget):
         self.top_grid_layout = Qt.QGridLayout()
         self.top_layout.addLayout(self.top_grid_layout)
 
-        self.settings = Qt.QSettings("GNU Radio", "Ejemplo_basico_gnu_radio")
+        self.settings = Qt.QSettings("GNU Radio", "basic_example")
 
         try:
             if StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
@@ -183,7 +183,7 @@ class Ejemplo_basico_gnu_radio(gr.top_block, Qt.QWidget):
 
 
     def closeEvent(self, event):
-        self.settings = Qt.QSettings("GNU Radio", "Ejemplo_basico_gnu_radio")
+        self.settings = Qt.QSettings("GNU Radio", "basic_example")
         self.settings.setValue("geometry", self.saveGeometry())
         event.accept()
 
@@ -201,7 +201,7 @@ class Ejemplo_basico_gnu_radio(gr.top_block, Qt.QWidget):
 
 
 
-def main(top_block_cls=Ejemplo_basico_gnu_radio, options=None):
+def main(top_block_cls=basic_example, options=None):
 
     if StrictVersion("4.5.0") <= StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
         style = gr.prefs().get_string('qtgui', 'style', 'raster')
